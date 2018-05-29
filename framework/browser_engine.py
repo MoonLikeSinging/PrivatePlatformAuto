@@ -24,7 +24,7 @@ class BrowserEngine(object):
         file_path = os.path.dirname(os.path.abspath('.')) + '/config/config.ini'
         config.read(file_path)
 
-        #获取配置文件属性
+        # 获取配置文件属性
         browser = config.get("browserType", "browserName")
         logger.info("You had select %s browser" % browser)
         url = config.get("testServer", "URL")
