@@ -1,7 +1,7 @@
 # coding=utf-8
 
 import unittest
-import HTMLTestRunner
+from tools import HTMLTestRunner
 import os
 import time
 
