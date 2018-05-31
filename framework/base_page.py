@@ -101,7 +101,7 @@ class BasePage(object):
         elif selector_by == "x" or selector_by == 'xpath':
             try:
                 element = self.driver.find_element_by_xpath(selector_value)
-                logger.info("Had find the element \' %s \' successful "
+                logger.info("Had find the element \'%s\' successful "
                             "by %s via value: %s " % (element.text, selector_by, selector_value))
             except NoSuchElementException as e:
                 logger.error("NoSuchElementException: %s" % e)
