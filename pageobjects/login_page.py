@@ -7,7 +7,7 @@ class LoginPage(BasePage):
     email = "id=>email"
     password = "id=>password"
     sign_button = "class_name=>btn-primary"
-    email_error = 'id=>email-error'
+    email_error = "id=>email-error"
     password_error = "id=>password-error"
     tips_info = 'xpath=>//*[@id="tips-info"]/span'
 

@@ -92,6 +92,14 @@ class BasePage(object):
             except NoSuchElementException as e:
                 logger.error("NoSuchElementException %s" % e)
                 self.get_windows_img()
+        elif selector_by == 'class_names':
+            try:
+                element = self.driver.find_elements_by_class_name(selector_value)
+                logger.info("Had find the elements \'%s\' successful "
+                            "by %s via value: %s " % (element, selector_by, selector_value))
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException %s" % e)
+                self.get_windows_img()
         elif selector_by == "l" or selector_by == 'link_text':
             element = self.driver.find_element_by_link_text(selector_value)
         elif selector_by == "p" or selector_by == 'partial_link_text':
