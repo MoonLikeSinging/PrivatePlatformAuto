@@ -44,7 +44,7 @@ class BrowserEngine(object):
         driver.get(url)
         logger.info("Open url: %s" % url)
         driver.maximize_window()
-        logger.info("Maximize the currect windows.")
+        logger.info("Maximize the current windows.")
         driver.implicitly_wait(5)
         logger.info("Set implicitly wait 5 seconds.")
         return driver
