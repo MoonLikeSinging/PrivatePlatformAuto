@@ -13,6 +13,7 @@ class BrowserEngine(object):
     dir = os.path.dirname(os.path.abspath('.'))
     chrome_driver_path = dir + '/tools/chromedriver.exe'
     firefox_driver_path = dir + '/tools/geckodriver.exe'
+    ie_driver_path = dir + '/tools/MicrosoftWebDriver.exe'
 
     def __init__(self, driver):
         self.driver = driver
@@ -36,6 +37,9 @@ class BrowserEngine(object):
         elif browser == "Chrome":
             driver = webdriver.Chrome(executable_path=self.chrome_driver_path)
             logger.info("Starting Chrome browser.")
+        elif browser =='IE':
+            driver = webdriver.Ie(executable_path=self.ie_driver_path)
+            logger.info("Starting IE browser.")
 
         driver.get(url)
         logger.info("Open url: %s" % url)
