@@ -4,7 +4,6 @@ import unittest
 from tools import HTMLTestRunner
 import os
 import time
-from testsuites import test_detection_page
 
 # 定义输出的文件位置和名字
 report_path = os.path.dirname(os.path.abspath('.')) + '/test_report/'

@@ -9,7 +9,7 @@ class DetectionPage(BasePage):
     password = "id=>password"
     sign_button = "class_name=>btn-primary"
     menu_detection_report = "id=>menu-detection-report"
-    add_android_app = "class_names=>btn-fileupload"
+    add_android_app = "class_name=>btn-fileupload"
 
     def input_email(self, text):
         self.type(self.email, text)
@@ -24,4 +24,4 @@ class DetectionPage(BasePage):
         self.click(self.menu_detection_report)
 
     def click_to_upload(self):
-        self.click(self.add_android_app[0])
+        self.click(self.add_android_app)

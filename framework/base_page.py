@@ -78,7 +78,7 @@ class BasePage(object):
 
         if selector_by == "i" or selector_by == 'id':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.ID, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -88,7 +88,7 @@ class BasePage(object):
                 self.get_windows_img()  # take screenshot
         elif selector_by == "n" or selector_by == 'name':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.NAME, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -98,7 +98,7 @@ class BasePage(object):
                 self.get_windows_img()  # take screenshot
         elif selector_by == "c" or selector_by == 'class_name':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.CLASS_NAME, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -116,7 +116,7 @@ class BasePage(object):
                 self.get_windows_img()
         elif selector_by == "l" or selector_by == 'link_text':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.LINK_TEXT, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -126,7 +126,7 @@ class BasePage(object):
                 self.get_windows_img()  # take screenshot
         elif selector_by == "p" or selector_by == 'partial_link_text':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -136,7 +136,7 @@ class BasePage(object):
                 self.get_windows_img()
         elif selector_by == "t" or selector_by == 'tag_name':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.TAG_NAME, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -146,7 +146,7 @@ class BasePage(object):
                 self.get_windows_img()
         elif selector_by == "x" or selector_by == 'xpath':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.XPATH, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -156,7 +156,7 @@ class BasePage(object):
                 self.get_windows_img()
         elif selector_by == "s" or selector_by == 'selector_selector':
             try:
-                element = WebDriverWait(self.driver, 5, 0.5).until(
+                element = WebDriverWait(self.driver, 20, 0.5).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, selector_value))
                 )
                 logger.info("Had find the element \'%s\' successful "
@@ -197,7 +197,7 @@ class BasePage(object):
         el = self.find_element(selector)
         try:
             el.click()
-            logger.info("The element \'%s\' was clicked." % el.text)
+            logger.info("The element \'%s\' was clicked." % el)
         except NameError as e:
             logger.error("Failed to click the element with %s" % e)
 

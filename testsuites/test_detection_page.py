@@ -30,15 +30,12 @@ class TestDetectionPage(unittest.TestCase):
         # cls.driver.quit()
         logger.info('over')
 
-    def test_upload_app(self):
+    def test_select_detection_menu(self):
         logger.info("Upload app")
         detection_page = DetectionPage(self.driver)
         detection_page.select_detection_report()
         detection_page.sleep(5)
-        detection_page_new = DetectionPage(self.driver)
-        detection_page_new.click_to_upload()
-        detection_page_new.sleep(5)
-
+        detection_page.click_to_upload()
 
 if __name__ == '__main__':
     unittest.main()
