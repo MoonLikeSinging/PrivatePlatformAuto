@@ -6,6 +6,7 @@ from framework.logger import Logger
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 # create a logger instance
 logger = Logger(logger="BasePage").get_log()
 
@@ -197,9 +198,9 @@ class BasePage(object):
         el = self.find_element(selector)
         try:
             el.click()
-            logger.info("The element \'%s\' was clicked." % el.get_attribute('textContent'))
+            logger.info("The element was clicked." )
         except NameError as e:
-            logger.error("Failed to click the element with %s" % e)
+            logger.error("Failed to click the element with %s" % format(e))
 
     # 或者网页标题
     def get_page_title(self):

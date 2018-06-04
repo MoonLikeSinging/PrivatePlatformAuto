@@ -27,8 +27,8 @@ class TestDetectionPage(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        # cls.driver.quit()
-        logger.info('over')
+        logger.info(' Test detection is finished!')
+        cls.driver.quit()
 
     def test_select_detection_menu(self):
         logger.info("Upload app")
