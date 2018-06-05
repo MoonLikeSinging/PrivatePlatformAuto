@@ -36,6 +36,7 @@ class TestDetectionPage(unittest.TestCase):
         detection_page.select_detection_report()
         detection_page.sleep(5)
         detection_page.click_to_upload()
+        detection_page.sleep(5)
 
 
 if __name__ == '__main__':
