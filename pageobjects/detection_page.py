@@ -25,3 +25,4 @@ class DetectionPage(BasePage):
 
     def click_to_upload(self):
         self.click(self.add_android_app)
+
