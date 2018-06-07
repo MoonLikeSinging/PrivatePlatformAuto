@@ -10,6 +10,7 @@ from pageobjects.detection_page import DetectionPage
 logger = Logger(logger='test_detection_page').get_log()
 path_upload_exe = os.path.dirname(os.path.abspath('.')) + '\\tools\\upload.exe'
 
+
 class TestDetectionPage(unittest.TestCase):
 
     @classmethod
