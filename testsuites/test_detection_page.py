@@ -8,13 +8,15 @@ from pageobjects.detection_page import DetectionPage
 
 
 logger = Logger(logger='test_detection_page').get_log()
-path_upload_exe = os.path.dirname(os.path.abspath('.')) + '\\tools\\upload.exe'
+path_upload_exe = os.path.dirname(os.path.abspath('.')) + r'\tools\upload.exe'
+path_download_file = os.path.dirname(os.path.abspath('.')) + r'\tools\download_file.py'
 
 
 class TestDetectionPage(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        # os.system('python ' + path_download_file)
         browser = BrowserEngine(cls)
         cls.driver = browser.open_browser(cls)
         cls.driver.implicitly_wait(10)
