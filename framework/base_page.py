@@ -95,7 +95,7 @@ class BasePage(object):
                 self.get_windows_img()  # take screenshot
         elif selector_by == 'class_name':
             try:
-                element = self.driver.find_elements_by_class_name(selector_value)
+                element = self.driver.find_element_by_class_name(selector_value)
                 logger.info("Had find the element \'%s\' successful "
                             "by %s via value: %s " % (element.text, selector_by, selector_value))
             except NoSuchElementException as e:
