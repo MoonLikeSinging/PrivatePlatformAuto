@@ -88,7 +88,7 @@ class TestLoginPage(unittest.TestCase):
         login_page.sleep(2)
         login_page.input_email('luyue@kiwisec.com')
         login_page.sleep(2)
-        login_page.input_pwd('kiwi888zx')
+        login_page.input_pwd('kiwi')
         login_page.sleep(2)
         login_page.sign_in()
         login_page.sleep(5)
